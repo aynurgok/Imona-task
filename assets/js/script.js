@@ -13,15 +13,15 @@ const getData = async (page) => {
 
     data.data.forEach(user => {
       userListElement.innerHTML += `
-        <div class="user-item d-flex p-4 col-sm-6 col-md-6 col-lg-3 gap-4 flex-column ">
-          <div class="product-header d-flex align-items-center justify-content-center  flex-wrap  gap-2 flex-wrap ">
+        <div class="user-item d-flex p-4 col-sm-6 col-md-4 col-lg-3 gap-4 flex-column w-100 ">
+          <div class="product-header d-flex align-items-center justify-content-between flex-wrap  gap-2 flex-wrap ">
             <img src="${user.avatar}" class="user-avatar" alt="avatar">
             <div class="product-detail d-flex flex-column align-items-center justify-content-center ">
               <p class='bold-title'>${user.first_name} ${user.last_name}</p>
               <p class='small-title'>${user.email}</p>
             </div>
           </div>
-          <a href="details.html?id=${user.id}" class='detail-link' ">Detayı Gör</a>
+          <a href="details.html?id=${user.id}" class='detail-link' ">Show details</a>
         </div>
       `;
     });
