@@ -35,7 +35,10 @@ const getData = async (page) => {
 //ilk 6 veri 
 getData(currentPage);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9469b1f9024709131f7c81b0ff18db0cc5b7b6bb
 prevBtn.addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--;
@@ -50,4 +53,8 @@ nextBtn.addEventListener('click', () => {
 
 function updatePaginationButtons() {
   prevBtn.disabled = currentPage === 1;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 9469b1f9024709131f7c81b0ff18db0cc5b7b6bb
 }
