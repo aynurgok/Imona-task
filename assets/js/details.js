@@ -17,7 +17,7 @@ const getData = async () =>  {
                 <img src="${user.data.avatar}" alt="product">
             </div>
             <div class="user_detail-info col-lg-9 col-lg-9 col-sm-9 p-4 row">
-                <h4 class="d-flex">İnformation</h4>
+                <h4 class="d-flex">User details</h4>
                 <div class=" d-flex flex-column py-4  col-sm-5  ">
                     <span>User name</span>
                     <p class="user-title">${user.data.first_name} ${user.data.last_name}</p>
