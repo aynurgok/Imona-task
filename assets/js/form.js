@@ -29,7 +29,7 @@ const sendForm = async () => {
             resultDiv.style.display = 'block';
             resultDiv.innerHTML = `
             <div class="d-flex align-items-center justify-content-center flex-column gap-3 result-info mt-4">
-                <p>Tebrikler Kullanıcı eklendi</p>
+                <p>Congratulations user added</p>
                 <p><span>id:</span> ${responseData.id} </p>
                 <p><span>created_at:</span> ${responseData.createdAt} </p> 
              </div>   
