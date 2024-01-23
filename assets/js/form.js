@@ -14,7 +14,7 @@ const sendForm = async () => {
             resultDiv.innerHTML = `
             
             <div class="d-flex align-items-center justify-content-center flex-column gap-3 result-info mt-4">
-                <p>Lütfen kullanıcı bilgilerini giriniz</p>
+                <p>Please enter user information</p>
              </div> `;
             return; 
         }
