@@ -35,7 +35,7 @@ const getData = async (page) => {
 //ilk 6 veri 
 getData(currentPage);
 
-// Önceki ve sonraki düğmelerine tıklama olayları ekle
+
 prevBtn.addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--;
@@ -48,9 +48,6 @@ nextBtn.addEventListener('click', () => {
   getData(currentPage);
 });
 
-// Pagination düğmelerini güncelleyen yardımcı fonksiyon
 function updatePaginationButtons() {
   prevBtn.disabled = currentPage === 1;
-  // Eğer belirli bir sayfa sayısı belli ise, bu kontrolü ekleyebilirsiniz
-  // nextBtn.disabled = currentPage === maxPage;
 }
