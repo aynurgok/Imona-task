@@ -7,6 +7,7 @@
 }
 .user-item {
   gap: 3px;
+  height: 200px;
   display: flex;
   align-items: center;
   position: relative;
@@ -18,7 +19,7 @@
    position: relative;
 }
 .user-avatar {
-  width: 100px;
+  width: 70px;
   object-fit: contain;
   border-radius: 50%;
 }
@@ -146,4 +147,13 @@ p {
 .result-info p>span {
  color:#292929;
  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding-bottom: 50px;
+  }
+  #userList {
+    padding: 30px;
+  }
 }

@@ -13,17 +13,17 @@ const getData = async (page) => {
 
     data.data.forEach(user => {
       userListElement.innerHTML += `
-        <div class="user-item d-flex p-4 col-sm-6 col-md-4 col-lg-3 gap-4 flex-column  ">
-          <div class=" d-flex align-items-center justify-content-center gap-2 flex-wrap ">
-            <div class='d-flex'>
+        <div class="user-item p-4 col-sm-6 col-md-4 col-lg-3 gap-4 ">
+          <div class="w-100 d-flex align-items-center justify-content-between gap-2 flex-wrap flex-column">
+            <div class='image'>
               <img src="${user.avatar}" class="user-avatar" alt="avatar">
             </div>
-            <div class="product-detail d-flex flex-column align-items-center justify-content-center ">
+            <div class="product-detail d-flex flex-column align-items-center justify-content-end gap-1">
               <p class='bold-title'>${user.first_name} ${user.last_name}</p>
               <p class='small-title'>${user.email}</p>
+              <a href="details.html?id=${user.id}" class='detail-link' ">Show details</a>
             </div>
           </div>
-          <a href="details.html?id=${user.id}" class='detail-link' ">Show details</a>
         </div>
       `;
     });
@@ -38,18 +38,16 @@ const getData = async (page) => {
 getData(currentPage);
 
 
-prevBtn.addEventListener('click', () => {
-  if (currentPage > 1) {
-    currentPage--;
-    getData(currentPage);
-  }
+prevBtn.addEventListener('click', (e) => {
+  getData(e.target.textContent);
+  currentPage = e.target.textContent;
 });
 
-nextBtn.addEventListener('click', () => {
-  currentPage++;
-  getData(currentPage);
+nextBtn.addEventListener('click', (e) => {
+  getData(e.target.textContent);
+  currentPage = e.target.textContent;
 });
 
 function updatePaginationButtons() {
-  prevBtn.disabled = currentPage === 1;
+  prevBtn.disabled = currentPage == 1;
 }
